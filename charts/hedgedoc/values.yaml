@@ -217,6 +217,27 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
+
+extraVolumes: []
+  #   - name: some-volume-name
+  #     mountPath: /path/in/container
+  #
+  # If you want to use saml - you have to provide the path to a certificate as file (CMD_SAML_IDPCERT)
+  # You may use "existingSecret" or another existing secret in the namespace to provide it.
+  #   - name: some-volume-name-secret
+  #     secret:
+  #       secretName: some-secret-name
+  #       items:
+  #         - path: saml-cert.pub
+  #           key: saml-cert.pub
+
+extraVolumeMounts: []
+  #   - name: some-volume-mount
+  #     mountPath: /path/in/container
+  #     subPath: filename
+  #     readOnly: false
+
+
 # -- Configure autoscaling
 autoscaling:
   enabled: false
